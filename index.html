@@ -11,11 +11,11 @@
 html,body{height:100%;background:var(--bg-deep);color:var(--ink);font-family:Rubik,"Segoe UI",Arial,sans-serif;overflow:hidden}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .viewport{position:fixed;inset:0;display:grid;place-items:center}
-.stage{position:relative;width:1600px;height:900px;transform-origin:center center;flex:none}
+.stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;margin:-450px 0 0 -800px;transform-origin:center center;flex:none}
 .slide{position:absolute;inset:0;background:var(--bg);padding:150px 56px 90px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s;overflow:hidden}
 .slide.on{opacity:1;visibility:visible}
-.brand{position:absolute;left:22px;top:24px;height:34px}
-.spark{position:absolute;left:248px;top:16px;height:27px}
+.brand{position:absolute;left:56px;top:24px;height:34px}
+.spark{position:absolute;left:282px;top:16px;height:27px}
 .conf{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-size:19px;color:#E9EEF5}
 .hd{position:absolute;top:30px;right:56px;left:420px;text-align:right}
 .eyebrow{color:var(--teal);font-weight:700;font-size:16px;letter-spacing:.02em;margin-bottom:6px}
@@ -124,7 +124,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lightbox img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6);background:#fff}
 #lbclose{position:absolute;top:14px;left:18px;width:44px;height:44px;border-radius:50%;background:#1B3038;color:#fff;font-size:20px}
 @media (prefers-reduced-motion:reduce){.slide,.progress i{transition:none}}
-@media print{html,body{overflow:visible;background:#fff}.viewport{position:static;display:block}.stage{transform:none!important}.slide{position:relative;opacity:1;visibility:visible;page-break-after:always}.bar,.progress{display:none}}
+@media print{html,body{overflow:visible;background:#fff}.viewport{position:static;display:block}.stage{transform:none!important;position:relative;left:auto;top:auto;margin:0}.slide{position:relative;opacity:1;visibility:visible;page-break-after:always}.bar,.progress{display:none}}
 </style>
 </head>
 <body>
